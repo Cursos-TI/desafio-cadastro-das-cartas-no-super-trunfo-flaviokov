@@ -16,6 +16,9 @@ int main() {
     float area;
     float pib;
     int numeroPontoTuristico;
+
+    float densidadePopulacional;
+    float pibPerCapita;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -41,11 +44,15 @@ int main() {
     printf("Número de Pontos Turísticos:\n");
     scanf("%d",&numeroPontoTuristico);
 
+    pibPerCapita = (pib / populacao);
+    densidadePopulacional = (populacao / area);
+
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n\n-- Dados da carta--\n\n");
+    printf("### Dados da carta ###\n");
+
     printf("Estado: %c\n",estado);
     printf("Código da Carta: %s \n",codigoCarta);
     printf("Nome da Cidade: %s\n",cidade);
@@ -53,5 +60,9 @@ int main() {
     printf("Área: %.2f km\n",area);
     printf("PIB %.2f bilhões de reais\n",pib);
     printf("Número de Pontos Turísticos: %d\n\n",numeroPontoTuristico);
+    printf("PIB per cpita é: %.2f\n",pibPerCapita);
+    printf("Densidade Populacional é: %.2f\n\n",densidadePopulacional);
+
+    printf("Carta criada com sucesso!\n\n"); 
     return 0;
 }
